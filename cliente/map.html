@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Me&#769;todo map() JavaScript</title>
+</head>
+<body>
+  <h1>Me&#769;todo map() JavaScript</h1>
+  <div id="app"></div>
+  <script src="../servidor/map.js"></script>
+  <script src="../servidor/map-reloaded.js"></script>
+  <script>
+    const products = [
+      {title: "burger", price: 121},
+      {title: "pizza", price: 20}
+    ];
+    const app = document.getElementById("app");
+    
+    const list = products.map(item => {
+      return `<li>${item.title} - ${item.price}</li>`;
+    });
+    app.innerHTML = "<ul>" + list.join("") + "</ul>";
+  </script>
+</body>
+</html>
